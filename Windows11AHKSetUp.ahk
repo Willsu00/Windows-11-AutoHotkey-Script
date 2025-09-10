@@ -12,6 +12,9 @@
 ; Caps Lock -> [
 CapsLock::[
 
+; Shift + CapsLock -> (
+^CapsLock::(
+
 ; Win + Q -> Switch to previous virtual desktop (workspace left)
 #q::
 {
@@ -79,5 +82,3 @@ CapsLock::[
         Run("code")
     }
 }
-
-
