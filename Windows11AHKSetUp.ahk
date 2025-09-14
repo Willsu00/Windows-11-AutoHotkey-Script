@@ -82,3 +82,33 @@ CapsLock::[
         Run("code")
     }
 }
+
+; Win + T -> Open current directory in PowerShell terminal
+#t::
+{
+    nvimPath := "C:\Program Files\Neovim\bin"
+
+    EnvSet("PATH", EnvGet("PATH") . ";" . nvimPath)
+
+    if WinActive("ahk_class CabinetWClass") || WinActive("ahk_class ExploreWClass")
+    {
+        oldClipboard := A_Clipboard
+        Send("^l")
+        Sleep(50)
+        Send("^c")
+        Sleep(100)
+        currentPath := A_Clipboard
+        A_Clipboard := oldClipboard
+
+        ; Launch PowerShell in current directory
+        if (currentPath != "" && !InStr(currentPath, "`n"))
+        {
+            Run("powershell.exe -NoExit -Command `"Set-Location '" . currentPath . "'; ls`"")
+            return
+        }
+    }
+
+    ; Fallback: open PowerShell normally
+    Run("powershell.exe")
+}
+
