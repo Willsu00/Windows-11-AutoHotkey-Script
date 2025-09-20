@@ -3,6 +3,7 @@
 | Hotkey          | Function                |
 | ----------------|:-----------------------:|
 | Windows + Enter | Git Bash                |
+| Alt + Backspace | Del                     |
 | CapsLock        | [                       |
 | Ctrl + CapsLock | (                       |
 | Windows + Q     | Move Workspace Left     |
