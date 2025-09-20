@@ -15,6 +15,9 @@ CapsLock::[
 ; Shift + CapsLock -> (
 ^CapsLock::(
 
+; Alt + Backspace -> Delete
+!Backspace::Del
+
 ; Win + Q -> Switch to previous virtual desktop (workspace left)
 #q::
 {
