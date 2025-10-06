@@ -18,6 +18,12 @@ CapsLock::[
 ; Alt + Backspace -> Delete
 !Backspace::Del
 
+; Win + B -> Launch Brave Browser
+#b::
+{
+    Run("C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe")
+}
+
 ; Win + Q -> Switch to previous virtual desktop (workspace left)
 #q::
 {
