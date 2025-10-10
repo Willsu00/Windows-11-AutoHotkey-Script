@@ -15,9 +15,6 @@ CapsLock::[
 ; Shift + CapsLock -> (
 ^CapsLock::(
 
-; Alt + Backspace -> Delete
-!Backspace::Del
-
 ; Win + B -> Launch Brave Browser
 #b::
 {
